@@ -20,6 +20,8 @@ from data_domain1 import DOMAIN1; from data_domain2 import DOMAIN2
 from data_domain3 import DOMAIN3; from data_domain4 import DOMAIN4
 from data_domain5 import DOMAIN5
 from data_domain6 import DOMAIN6
+from lab_datasets import DATASETS
+from build_labs import lab_dirname
 ACT=DOMAIN1+DOMAIN2+DOMAIN3+DOMAIN4+DOMAIN5+DOMAIN6
 import prodoc
 def _find_repo(start):
@@ -132,9 +134,22 @@ for t in C.TOPICS:
             img(_vis,f"Lab {a['num']} at a glance — the deliverable, the tools and the steps.")
         h3("Step-by-step")
         steps([(instr,cmd) for instr,cmd in a["steps"]])
+        _specs = DATASETS.get(a["num"], [])
+        if _specs:
+            h3("Data files for this lab")
+            bullets([f"{d['file']} — "
+                     f"{'dataset' if d['kind']=='data' else 'template'}. {d['about']}"
+                     for d in _specs])
+            p("Each workbook opens on a Data Dictionary sheet defining every column, "
+              "its unit and the specification limits.")
         h3("Check your work")
         p(a["test"])
-        note(f"The full worksheet for this lab is in labs/lab-{a['num']:02d}-*.md.")
+        _folder = lab_dirname(a)
+        if _specs:
+            note(f"The full worksheet and the data files for this lab are in "
+                 f"labs/{_folder}/.")
+        else:
+            note(f"The full worksheet for this lab is in labs/{_folder}/README.md.")
         rule()
 
 h1("Quick Reference — Formulas You Should Know")
@@ -301,6 +316,7 @@ prodoc.add_version_control(doc,[
   "subsequent lab adds one artifact to it; Day 5 consolidates them into an A3 storyboard and a steering "
   "committee presentation.",C.TRAINER),
  ("3",C.VERSION_DATE,"Corrected the assessment model to match the registered WSQ instrument: the assessment is the Written Assessment (WA) Short-Answer Questions plus the Case Study (CS), both open book. The capstone project and steering committee presentation are retained as an ADDITIONAL course deliverable on top of the WSQ assessment, not as a replacement for it. Added the online SIPOC tool (alfredang.github.io/sipoc) to the toolkit, Lab 6 and the Define slides.",C.TRAINER),
+ ("3","23 September 2026","Hands-on lab data release. Every lab now has its OWN folder under labs/ containing the worksheet and an Excel workbook: 20 labs carry simulated process datasets and 14 carry structured templates. All data describes one running process (the Meridian Medical Devices seal-weld line), so figures reconcile across labs — baseline Ppk 0.62 in Lab 14, the proven Xs in Labs 18-21, the DOE optimum in Labs 23-25, improved Ppk 1.40 in Lab 27 and the SGD 487,000 benefit in Lab 30 against the SGD 812,000 COPQ chartered in Lab 1. Every workbook opens on a Data Dictionary sheet. The Learner Guide now lists the data files for each lab and points at the lab folder.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 

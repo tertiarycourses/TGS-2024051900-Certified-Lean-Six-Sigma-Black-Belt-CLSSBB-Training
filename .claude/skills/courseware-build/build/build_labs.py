@@ -48,6 +48,13 @@ TOOLS = {
 # The running scenario is defined ONCE in data_domain1.py and imported here, so the
 # labs, deck, LG and assessment can never drift onto different scenarios.
 from data_domain1 import SCENARIO
+from lab_datasets import DATASETS, dataset_files, has_data
+from build_lab_workbooks import write_workbook
+
+
+def lab_dirname(a):
+    """Each lab gets its OWN folder: labs/lab-NN-<slug>/."""
+    return f"lab-{a['num']:02d}-{slug(a['title'])}"
 
 
 def slug(title):
@@ -99,6 +106,25 @@ def lab_md(a):
         for name, url in used:
             out.append(f"- **{name}** — {url}")
         out.append("")
+    specs = DATASETS.get(a["num"], [])
+    if specs:
+        out.append("## Data files in this folder")
+        out.append("")
+        for d in specs:
+            label = "Dataset" if d["kind"] == "data" else "Template"
+            out.append(f"- **`{d['file']}`** — *{label}.* {d['about']}")
+        out.append("")
+        out.append("Open the workbook from THIS lab's folder. Every workbook has a "
+                   "**`Data Dictionary`** sheet that defines each column, its unit and its "
+                   "specification limits — read it before you analyse anything.")
+        out.append("")
+        if any(d["kind"] == "data" for d in specs):
+            out.append("> The data describes the same Meridian Medical Devices seal-weld process "
+                       "used by every other lab, so the figures you compute here agree with the "
+                       "ones you computed earlier. Use your OWN workplace data instead wherever "
+                       "you can obtain it — the workbook is the fallback.")
+            out.append("")
+
     out.append("## Steps")
     out.append("")
     for i, (instr, cmd) in enumerate(a["steps"], 1):
@@ -156,7 +182,7 @@ def readme_md():
     out.append("|---|-----|-------------|------|")
     files = {}
     for a in ACT:
-        fn = f"lab-{a['num']:02d}-{slug(a['title'])}.md"
+        fn = f"lab-{a['num']:02d}-{slug(a['title'])}/README.md"
         files[a["num"]] = fn
         kind = "Elective" if a.get("elective") else "Core"
         title = a["title"].replace("Elective — ", "")
@@ -267,16 +293,96 @@ def tools_md():
 
 # ---------------------------------------------------------------- write
 os.makedirs(LABS, exist_ok=True)
-for old in glob.glob(os.path.join(LABS, "lab-*.md")):
-    os.remove(old)
+# Flat lab-NN-*.md files from the previous (pre-folder) layout are superseded by
+# labs/lab-NN-*/README.md. Remove only those generated files, never a folder.
+for stale in glob.glob(os.path.join(LABS, "lab-*.md")):
+    os.remove(stale)
 
 readme, files = readme_md()
 written = 0
+workbooks = 0
 for a in ACT:
-    path = os.path.join(LABS, files[a["num"]])
-    with open(path, "w") as f:
+    folder = os.path.join(LABS, lab_dirname(a))
+    os.makedirs(folder, exist_ok=True)
+    with open(os.path.join(folder, "README.md"), "w") as f:
         f.write(lab_md(a))
     written += 1
+    for d in DATASETS.get(a["num"], []):
+        write_workbook(os.path.join(folder, d["file"]), d, a, C)
+        workbooks += 1
+
+# ---------------------------------------------------------------- trainer keys
+# The expected finding for every lab dataset. TRAINER-ONLY: it is written outside
+# labs/ and gitignored, because a learner who reads it first does not do the lab.
+KEYS = os.path.join(REPO, "trainer-notes")
+os.makedirs(KEYS, exist_ok=True)
+key = []
+key.append(f"# Trainer Answer Keys — {C.TITLE}")
+key.append("")
+key.append(f"**{C.COURSE_CODE} · Version {C.VERSION} · {C.VERSION_DATE}**")
+key.append("")
+key.append("> **TRAINER ONLY — do not distribute.** This file states the finding each lab "
+           "dataset is built to produce, so you can confirm a learner's analysis quickly and "
+           "steer a group that has gone down the wrong path. It is deliberately excluded from "
+           "the public repository.")
+key.append("")
+key.append("Every dataset is generated from a fixed seed, so these figures are reproducible: "
+           "re-run the analysis on the shipped workbook and you will get these numbers.")
+key.append("")
+key.append("## The running process — one story across all labs")
+key.append("")
+key.append("| Checkpoint | Value | Established in |")
+key.append("|---|---|---|")
+key.append("| Baseline defect rate | 2.9% | Lab 3 |")
+key.append("| Baseline Ppk | 0.62 (Pp), 0.53 (Ppk) | Lab 14 |")
+key.append("| Measurement system | FAILS Gage R&R (~40% study variation) | Lab 11 |")
+key.append("| Proven Xs | Clamp pressure, dwell time, electrode tip age | Labs 18-21 |")
+key.append("| DOE optimum | Clamp 47.4 bar, dwell 2.76 s | Labs 23-25 |")
+key.append("| Improved Ppk | 1.40 | Lab 27 |")
+key.append("| Annual hard benefit | SGD 487,000 (vs SGD 812,000 baseline COPQ) | Labs 1, 30 |")
+key.append("")
+for a in ACT:
+    specs = DATASETS.get(a["num"], [])
+    if not specs:
+        continue
+    title = a["title"].replace("Elective — ", "")
+    key.append(f"## Lab {a['num']} — {title}")
+    key.append("")
+    for d in specs:
+        key.append(f"**Workbook:** `{lab_dirname(a)}/{d['file']}` "
+                   f"({'dataset' if d['kind'] == 'data' else 'template'})")
+        key.append("")
+        key.append(d["answer"])
+        key.append("")
+# ---- assessment alignment matrix -------------------------------------------
+# Which labs rehearse each assessed criterion. The WA (SAQ) assesses K1-K2 and
+# the Case Study assesses A1-A5, so every assessed criterion must be practised
+# in class before it is assessed. This table is derived from the lab objectives,
+# so it cannot drift away from the labs themselves.
+import re as _re
+key.append("## Assessment alignment — which labs rehearse each assessed criterion")
+key.append("")
+key.append("The WA (SAQ) assesses **K1, K2**; the Case Study assesses **A1-A5**. "
+           "Every assessed criterion is practised in the labs below before it is assessed.")
+key.append("")
+key.append("| Criterion | Assessed by | Rehearsed in labs |")
+key.append("|---|---|---|")
+_cov = {}
+for a in ACT:
+    for c in set(_re.findall(r"[KA]\d", a["objective"])):
+        _cov.setdefault(c, []).append(a["num"])
+for c in sorted(_cov):
+    instrument = "WA (SAQ)" if c.startswith("K") else "Case Study"
+    key.append(f"| {c} | {instrument} | "
+               + ", ".join(f"Lab {n}" for n in sorted(_cov[c])) + " |")
+key.append("")
+
+key.append("---")
+key.append("")
+key.append(f"*{C.TITLE} · {C.COURSE_CODE} · © 2026 {C.ORG} · TRAINER ONLY*")
+key.append("")
+with open(os.path.join(KEYS, "lab-answer-keys.md"), "w") as f:
+    f.write("\n".join(key))
 
 with open(os.path.join(LABS, "README.md"), "w") as f:
     f.write(readme)
@@ -406,5 +512,5 @@ def repo_readme(files):
 with open(os.path.join(REPO, "README.md"), "w") as f:
     f.write(repo_readme(files))
 
-print(f"Saved {written} lab files to {LABS}  ({core} core, {written-core} elective)")
-print("Saved labs/README.md, labs/tools.md and README.md")
+print(f"Saved {written} lab folders + {workbooks} workbooks to {LABS}  ({core} core, {written-core} elective)")
+print("Saved labs/README.md, labs/tools.md, README.md and trainer-notes/lab-answer-keys.md")

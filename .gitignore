@@ -22,6 +22,14 @@ reference/
 *PP Assessment*
 
 # ---------------------------------------------------------------------------
+# Trainer-only lab answer keys
+# ---------------------------------------------------------------------------
+# trainer-notes/ holds the expected finding for every lab dataset. Learners who
+# read it first do not do the lab, so it stays out of the public repository.
+# The GENERATOR that writes it lives in .claude/ and is versioned.
+trainer-notes/
+
+# ---------------------------------------------------------------------------
 # Oversized source material (GitHub hard-rejects files over 100 MB)
 # ---------------------------------------------------------------------------
 # The original 113 MB v21 trainer deck is the input to the rebuild, not an
@@ -46,3 +54,7 @@ Thumbs.db
 ~$*
 .~lock.*#
 *.tmp
+
+# Python bytecode from the build pipeline
+__pycache__/
+*.pyc

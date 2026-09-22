@@ -18,6 +18,7 @@ import course_data as C
 from data_domain1 import DOMAIN1; from data_domain2 import DOMAIN2
 from data_domain3 import DOMAIN3; from data_domain4 import DOMAIN4
 from data_domain5 import DOMAIN5; from data_domain6 import DOMAIN6
+from lab_datasets import DATASETS
 ACT=DOMAIN1+DOMAIN2+DOMAIN3+DOMAIN4+DOMAIN5+DOMAIN6
 import prodoc
 def _find_repo(start):
@@ -211,6 +212,7 @@ prodoc.add_version_control(doc,[
   "workplace process in Lab 1 and every subsequent lab adds one artifact to it; Day 5 consolidates "
   "the artifacts into an A3 storyboard and a steering committee presentation.",C.TRAINER),
  ("3",C.VERSION_DATE,"Corrected the assessment model to match the registered WSQ instrument: the assessment is the Written Assessment (WA) Short-Answer Questions plus the Case Study (CS), both open book. The capstone project and steering committee presentation are retained as an ADDITIONAL course deliverable on top of the WSQ assessment, not as a replacement for it. Added the online SIPOC tool (alfredang.github.io/sipoc) to the toolkit, Lab 6 and the Define slides.",C.TRAINER),
+ ("3","23 September 2026","Hands-on lab data release. Every lab now has its OWN folder under labs/ containing the worksheet and an Excel workbook: 20 labs carry simulated process datasets and 14 carry structured templates. All data describes one running process (the Meridian Medical Devices seal-weld line), so figures reconcile across labs — baseline Ppk 0.62 in Lab 14, the proven Xs in Labs 18-21, the DOE optimum in Labs 23-25, improved Ppk 1.40 in Lab 27 and the SGD 487,000 benefit in Lab 30 against the SGD 812,000 COPQ chartered in Lab 1. Every workbook opens on a Data Dictionary sheet. The Lesson Plan adds a Lab Data Files and Materials table so the trainer can set the room up before the session.",C.TRAINER),
 ])
 prodoc.add_toc(doc)
 
@@ -287,6 +289,30 @@ for tp in C.TOPICS:
     set_cell(cells[1],tp["weighting"],size=9.5,fill=TOPIC_FILL)
     set_cell(cells[2],", ".join(
         f"Lab {a['num']}" + (" (elective)" if a.get("elective") else "") for a in acts),size=9.5)
+
+# ---------------------------------------------------------------- lab data files
+# The LP must tell the trainer which workbook each lab needs, so the room can be
+# set up before the session. Same single source as the labs themselves.
+doc.add_page_break()
+H("Lab Data Files and Materials",1)
+doc.add_paragraph(
+  "Every lab folder under labs/ contains the worksheet (README.md) and the Excel "
+  "workbook listed below. Datasets carry simulated process data for analysis; "
+  "templates are blank structured forms the learner completes. All workbooks open "
+  "on a Data Dictionary sheet defining each column, its unit and the specification "
+  "limits. Learners are encouraged to substitute their own workplace data wherever "
+  "they can obtain it.")
+dt=doc.add_table(rows=0,cols=4); dt.style="Table Grid"
+hdr=dt.add_row().cells
+for i,htext in enumerate(["Lab","Workbook","Type","What it contains"]):
+    set_cell(hdr[i],htext,bold=True,size=9,color=RGBColor(0xFF,0xFF,0xFF),fill=HEADER_FILL)
+for a in ACT:
+    for d in DATASETS.get(a["num"],[]):
+        cells=dt.add_row().cells
+        set_cell(cells[0],f"Lab {a['num']}",bold=True,size=8.5)
+        set_cell(cells[1],d["file"],size=8.5)
+        set_cell(cells[2],"Dataset" if d["kind"]=="data" else "Template",size=8.5)
+        set_cell(cells[3],d["about"],size=8.5)
 
 prodoc.add_page_numbers(doc)
 prodoc.enable_update_fields(doc)

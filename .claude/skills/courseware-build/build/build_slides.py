@@ -23,6 +23,7 @@ from data_domain3 import DOMAIN3
 from data_domain4 import DOMAIN4
 from data_domain5 import DOMAIN5
 from data_domain6 import DOMAIN6
+from lab_datasets import DATASETS
 from components import (Deck, BLUE, TEAL, AMBER, RED, VIOLET, INK, GREY, LIGHT,
                         WHITE, LINE, DMAIC_COLORS)
 import concepts
@@ -366,12 +367,20 @@ for t in C.TOPICS:
             cut = s.rfind(" ", 0, n)
             return (s[:cut] if cut > 0 else s[:n]).rstrip(" ,;:-—") + "…"
 
+        def _with_data(a, body):
+            """Append the workbook name so the deck, LG, LP and labs all cite the
+            SAME file — a learner reading the slide knows which file to open."""
+            files = [d["file"] for d in DATASETS.get(a["num"], [])]
+            if not files:
+                return clip(body, 108)
+            return clip(body, 84) + "  •  Data: " + files[0]
+
         rows = []
         for a in core:
-            rows.append((clip(f"Lab {a['num']} — {a['title']}", 88), clip(a["build"], 108)))
+            rows.append((clip(f"Lab {a['num']} — {a['title']}", 88), _with_data(a, a["build"])))
         for a in opts:
             rows.append((clip(f"Lab {a['num']} (elective) — {a['title'].replace('Elective — ', '')}", 88),
-                         clip(a["build"], 108)))
+                         _with_data(a, a["build"])))
         # tile_grid caps out around 6 rows at cols=1; chunk so nothing overflows
         for i in range(0, len(rows), 6):
             chunk = rows[i:i + 6]

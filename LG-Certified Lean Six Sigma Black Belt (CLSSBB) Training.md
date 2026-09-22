@@ -1,6 +1,6 @@
 # Certified Lean Six Sigma Black Belt (CLSSBB) Training — Learner Guide
 
-**WSQ Course Code:** TGS-2024051900  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v3 · 20 July 2026**
+**WSQ Course Code:** TGS-2024051900  |  **Conducted by:** Tertiary Infotech Academy Pte Ltd (UEN 201200696W)  |  **Version v4 · 23 September 2026**
 
 ## Contents
 
@@ -172,11 +172,17 @@ A scored project selection matrix and a signed-off capstone project charter.   (
 9. Write your problem statement to the four-part test: the process, the time period, the measurable gap and the business impact — with no cause and no solution in it.
 10. Identify your sponsor and record what you need from them. Where possible, obtain real sign-off before Day 2.
 
+**Data files for this lab**
+
+- lab-01-project-selection-and-charter.xlsx — template. A project selection matrix pre-loaded with six candidate projects, and a blank charter form.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You have a weighted selection matrix with at least five scored candidates, a documented rejection rationale, an annualised COPQ figure, and a complete charter whose problem statement contains no cause and no solution.
 
-> **Note:** The full worksheet for this lab is in labs/lab-01-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-01-select-and-charter-your-capstone-project/.
 
 ---
 
@@ -206,11 +212,17 @@ A strategy-to-project traceability map and a Black Belt accountability charter. 
 7. Define the tollgate cadence for your capstone: what evidence closes Define, Measure, Analyze, Improve and Control, and who signs each one off.
 8. Write your Black Belt accountability charter — what you own, what you delegate, what you escalate.
 
+**Data files for this lab**
+
+- lab-02-portfolio-and-belt-roles.xlsx — template. A portfolio of eight live projects to balance against strategy, plus a belt role matrix.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every candidate project traces to a named business objective, your belt matrix distinguishes Black from Green Belt accountability, and your capstone has a defined five-tollgate governance plan.
 
-> **Note:** The full worksheet for this lab is in labs/lab-02-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-02-portfolio-selection-strategy-alignment-and-the-black-belt-ro/.
 
 ---
 
@@ -241,11 +253,17 @@ A DMAIC tollgate map, a Y = f(X) model and a baseline DPMO / sigma level for you
 8. Convert DPMO to a baseline sigma level using the conversion table, and state whether the 1.5-sigma long-term shift is included.
 9. Record this baseline in your capstone pack — every improvement claim on Day 5 is measured against this number.
 
+**Data files for this lab**
+
+- lab-03-baseline-sigma-calculator.xlsx — template. Twelve months of production and defect counts — compute DPU, DPO, DPMO, yield, RTY and the baseline sigma level for your project Y.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You can explain all five DMAIC tollgates without notes, your Y is a measurable customer-facing output with at least twelve classified Xs, and your baseline DPMO and sigma level are calculated from real counts.
 
-> **Note:** The full worksheet for this lab is in labs/lab-03-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-03-dmaic-at-depth-recap-y-fx-and-baseline-sigma-for-your-projec/.
 
 ---
 
@@ -293,11 +311,17 @@ A VOC log, an affinity diagram and a Kano classification for your capstone custo
 8. Identify the one or two themes that most drive your project Y, and record them as your CTQ candidates for the next lab.
 9. Note how you would coach a Green Belt through this exercise — what mistake would you expect them to make?
 
+**Data files for this lab**
+
+- lab-04-voc-affinity-kano.xlsx — template. Forty raw customer verbatims from hospital distributors and biomedical engineers — cluster them, translate them into requirements and classify them on the Kano model.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You have fifteen or more verbatims, every verbatim sits in a named affinity cluster, every cluster carries a Kano classification, and your CTQ candidates trace to specific verbatims.
 
-> **Note:** The full worksheet for this lab is in labs/lab-04-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-04-voice-of-the-customer-affinity-and-kano-in-depth/.
 
 ---
 
@@ -328,11 +352,17 @@ A CTQ tree with targets and specification limits, plus a flowdown to controllabl
 8. Break each sub-Y into the Xs that drive it. Continue until you reach Xs a team can directly control or experiment on.
 9. Mark on the cascade which Xs you will measure in Day 2, test statistically in Day 3, and experiment on in Day 4.
 
+**Data files for this lab**
+
+- lab-05-ctq-tree-flowdown.xlsx — template. A CTQ tree worksheet that flows the must-be need down to measurable, controllable Xs.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every CTQ has an operational definition, a target and specification limits, and your flowdown reaches at least one layer of Xs that are directly controllable and testable.
 
-> **Note:** The full worksheet for this lab is in labs/lab-05-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-05-ctq-trees-and-ctq-flowdown-to-controllable-xs/.
 
 ---
 
@@ -368,11 +398,17 @@ A SIPOC, a detailed swimlane process map and a documented scope boundary.   (Too
 8. Compare your map against the charter scope. Anything on the map outside the scope boundary must be explicitly marked out-of-scope.
 9. Record the three questions you will ask when someone proposes expanding the scope mid-project.
 
+**Data files for this lab**
+
+- lab-06-sipoc-process-map.xlsx — template. A SIPOC frame and a swimlane step list for the seal weld process, with handoff analysis.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your SIPOC's first and last steps match your charter scope exactly, your swimlane map marks every handoff and rework loop, and the map has been validated by walking the actual process.
 
-> **Note:** The full worksheet for this lab is in labs/lab-06-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-06-sipoc-process-mapping-and-scope-governance/.
 
 ---
 
@@ -403,11 +439,17 @@ A stakeholder influence/support map, a resistance diagnosis and an ADKAR change 
 8. Write the communication plan: audience, message, channel, frequency and owner. Sponsors, operators and customers need different messages.
 9. Identify the single stakeholder most likely to derail your capstone, and write your specific mitigation.
 
+**Data files for this lab**
+
+- lab-07-stakeholder-analysis.xlsx — template. Twelve named stakeholders on this project — map their influence and support, and plan the specific action that moves each one.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every stakeholder is plotted on the influence/support grid, every high-influence resistor has a named action matched to a diagnosed resistance type, and your ADKAR plan covers all five elements.
 
-> **Note:** The full worksheet for this lab is in labs/lab-07-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-07-stakeholder-analysis-resistance-management-and-change-leader/.
 
 ---
 
@@ -458,11 +500,17 @@ A current-state VSM with a value-added ratio, takt time and a quantified waste l
 9. Walk your value stream and log every instance of each waste. Quantify each in time or money — an unquantified waste will not win funding.
 10. Mark the three points on the VSM where the largest waste concentrates. These become improvement candidates for Day 4.
 
+**Data files for this lab**
+
+- lab-08-value-stream-map.xlsx — template. Timed process data for the current-state value stream map, with the eight wastes observation log and a takt time calculator.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your VSM shows both material and information flow, you have calculated the value-added ratio and takt time from real numbers, and every logged waste carries a time or dollar quantification.
 
-> **Note:** The full worksheet for this lab is in labs/lab-08-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-08-value-stream-mapping-takt-time-and-the-eight-wastes-in-depth/.
 
 ---
 
@@ -494,11 +542,17 @@ A data collection plan with operational definitions for every metric in your cap
 9. Design the check sheet or data form. Make the easy path the correct path, or collectors will improvise.
 10. Dry-run the plan on a small batch and fix whatever breaks before committing to full collection.
 
+**Data files for this lab**
+
+- lab-09-data-collection-raw-extract.xlsx — dataset. Raw 240-row MES extract of seal weld burst-pressure tests — deliberately messy, so you can write operational definitions that fix it.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every capstone metric has a written operational definition that two people apply identically, stratification fields are captured at source, and the plan has survived a dry run.
 
-> **Note:** The full worksheet for this lab is in labs/lab-09-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-09-data-types-operational-definitions-and-the-data-collection-p/.
 
 ---
 
@@ -530,11 +584,17 @@ Calculated sample sizes for your capstone metrics and a rational subgrouping sch
 9. Set subgroup size and sampling frequency for your capstone Y, and state what shift size you would be able to detect.
 10. Document the sampling plan and check it against the data collection plan from Lab 9 for consistency.
 
+**Data files for this lab**
+
+- lab-10-sampling-frame.xlsx — dataset. A 600-unit population frame for one month — draw random, stratified, systematic and cluster samples from it and compare what each one tells you.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your sample sizes are calculated from a real estimate of s or p, your subgrouping scheme places common-cause variation within subgroups, and you can state the shift size your plan can detect.
 
-> **Note:** The full worksheet for this lab is in labs/lab-10-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-10-sampling-strategy-sample-size-and-rational-subgrouping/.
 
 ---
 
@@ -566,11 +626,17 @@ A completed crossed Gage R&R study with %study variation and ndc for your capsto
 9. Calculate the number of distinct categories (ndc). ndc must be 5 or more for the gauge to distinguish parts usefully.
 10. If the gauge fails, decide the fix: recalibrate, retrain operators, tighten the operational definition or replace the instrument. Then re-run.
 
+**Data files for this lab**
+
+- lab-11-gage-rr-continuous.xlsx — dataset. Crossed Gage R&R: 10 parts x 3 operators x 3 trials on the burst-pressure rig. The study is built to FAIL — find out why before you trust any other data.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your study uses parts spanning the full process range with randomised blinded order, and you have computed %study variation and ndc with a stated accept/reject decision.
 
-> **Note:** The full worksheet for this lab is in labs/lab-11-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-11-continuous-gage-rr-in-depth/.
 
 ---
 
@@ -603,11 +669,17 @@ An attribute agreement study with within-, between- and versus-standard Kappa va
 10. Apply the acceptance rule: Kappa >= 0.90 excellent, 0.75-0.90 acceptable, below 0.75 requires action. Note that 90% raw agreement can still yield a poor Kappa.
 11. Where agreement fails, prescribe the fix: boundary samples, photographic standards, tightened operational definitions or appraiser retraining. Then re-run.
 
+**Data files for this lab**
+
+- lab-12-attribute-msa-kappa.xlsx — dataset. Attribute agreement study — 50 seal-weld photos, 3 inspectors, 2 trials each, against a known expert reference standard.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your study includes borderline items and a known standard, you have computed within-appraiser, between-appraiser and versus-standard agreement plus Kappa, and you have an action plan for any Kappa below 0.75.
 
-> **Note:** The full worksheet for this lab is in labs/lab-12-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-12-attribute-msa-and-kappa-analysis-black-belt-only/.
 
 ---
 
@@ -639,11 +711,17 @@ A nested gauge study design and analysis for a destructive or single-measurement
 9. State that confounding explicitly in your report. A nested study OVERSTATES repeatability variation, so it is a conservative test.
 10. Decide accept/reject, and record the design choice and its rationale for the Day 5 presentation — expect this to be challenged.
 
+**Data files for this lab**
+
+- lab-13-nested-destructive-gauge.xlsx — dataset. Nested (hierarchical) MSA for a DESTRUCTIVE burst test — each specimen can only be measured once, so operators measure different specimens from the same batch.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You can explain why a crossed study is invalid for your measurement, your batches are justified as homogeneous, and your report states the repeatability/part-variation confounding explicitly.
 
-> **Note:** The full worksheet for this lab is in labs/lab-13-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-13-nested-and-destructive-gauge-studies-black-belt-only/.
 
 ---
 
@@ -676,11 +754,17 @@ A baseline capability study for your capstone Y with a documented normality deci
 10. Calculate both Cpk and Ppk for your capstone Y and explain the gap between them. A large gap means the process drifts between subgroups.
 11. Record the baseline capability in your capstone pack alongside the Lab 3 sigma level.
 
+**Data files for this lab**
+
+- lab-14-baseline-capability.xlsx — dataset. 250 baseline burst-pressure readings in 50 subgroups of 5 (normal), plus 200 right-skewed leak-test cycle times for the non-normal capability exercise.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You have confirmed stability before computing capability, tested and documented normality with a p-value, handled non-normality by transformation or distribution fitting, and reported both Cpk and Ppk with an explanation of the gap.
 
-> **Note:** The full worksheet for this lab is in labs/lab-14-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-14-baseline-capability-cp-cpk-pp-ppk-and-nonnormal-data/.
 
 ---
 
@@ -733,11 +817,17 @@ A run chart with pattern analysis, a Pareto chart and a stratified defect analys
 10. Build boxplots of your Y across each stratification factor to compare medians, spread and outliers visually before testing statistically.
 11. Record your top three candidate Xs from stratification — these feed directly into the hypothesis tests in Lab 17.
 
+**Data files for this lab**
+
+- lab-15-run-chart-pareto-stratification.xlsx — dataset. Three sheets: 60 daily Y averages for run-chart pattern analysis, a defect-mode Pareto count, and a plant/line/shift stratification table.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your run chart is assessed against all six patterns, your Pareto is weighted appropriately, and stratification has produced at least three named candidate Xs for statistical testing.
 
-> **Note:** The full worksheet for this lab is in labs/lab-15-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-15-variation-run-charts-pareto-and-stratification-in-depth/.
 
 ---
 
@@ -770,11 +860,17 @@ A fishbone diagram, 5 Whys chains and a prioritised list of testable candidate c
 10. Convert your top five testable causes into formal hypothesis statements ready for Lab 17.
 11. Note how you would coach a Green Belt team through this session, and the two facilitation mistakes you would watch for.
 
+**Data files for this lab**
+
+- lab-16-cause-prioritisation.xlsx — template. The 12 candidate causes the team brainstormed onto the fishbone — score and rank them into the vital few worth testing statistically.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your fishbone carries 25+ causes across all six bones, 5 Whys chains terminate at process rather than person, and you have five testable causes written as formal hypotheses.
 
-> **Note:** The full worksheet for this lab is in labs/lab-16-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-16-fishbone-5-whys-and-cause-prioritisation-in-depth/.
 
 ---
 
@@ -808,11 +904,17 @@ Completed hypothesis tests on your capstone's candidate causes with documented c
 11. Distinguish statistical from PRACTICAL significance. A p-value of 0.001 on a 0.2 percent improvement is real but worthless — always report effect size alongside p.
 12. Build your rejected-causes log so nobody re-litigates cleared causes in Improve, and record confirmed causes in your capstone pack.
 
+**Data files for this lab**
+
+- lab-17-hypothesis-testing.xlsx — dataset. Three tests on one sheet each: a 2-sample t (old vs new fixture), a paired t (before/after operator re-training) and a 2-proportion test (defect rates by plant).
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every test has a documented selection justification and assumption check, results report effect size alongside the p-value, and you maintain both a confirmed-cause and a rejected-cause log.
 
-> **Note:** The full worksheet for this lab is in labs/lab-17-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-17-hypothesis-testing-in-depth-with-test-selection/.
 
 ---
 
@@ -847,11 +949,17 @@ A validated multiple regression model with full residual and multicollinearity d
 12. Guard against overfitting: hold back a validation subset, or use cross-validation, and confirm the model predicts data it has not seen.
 13. Translate the final model into business language: for each significant X, state what a one-unit change does to Y in customer or dollar terms.
 
+**Data files for this lab**
+
+- lab-18-multiple-regression.xlsx — dataset. 120 production runs with five candidate Xs against burst pressure — including two predictors that are collinear on purpose.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your final model has all VIFs under 5, residual plots show no pattern, adjusted R-squared is reported, the model has been validated on held-out data, and each coefficient is stated in business terms.
 
-> **Note:** The full worksheet for this lab is in labs/lab-18-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-18-multiple-regression-and-model-diagnostics-black-belt-only/.
 
 ---
 
@@ -886,11 +994,17 @@ One-way and two-way ANOVA on your capstone data plus a non-parametric confirmati
 12. Map each test to its non-parametric equivalent: 2-sample t -> Mann-Whitney; one-way ANOVA -> Kruskal-Wallis; paired t -> Wilcoxon signed-rank; and Mood's median for heavy outliers.
 13. Re-run one of your significant findings using its non-parametric equivalent. Agreement across both strengthens your Day 5 defence considerably.
 
+**Data files for this lab**
+
+- lab-19-anova-interactions-nonparametric.xlsx — dataset. One-way ANOVA across four seal-ring suppliers, a two-way ANOVA (plant x shift) containing a genuine interaction, and skewed data for Kruskal-Wallis.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your ANOVA assumptions are tested and documented, significant results carry a post-hoc analysis, you have interpreted an interaction plot, and at least one finding is confirmed non-parametrically.
 
-> **Note:** The full worksheet for this lab is in labs/lab-19-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-19-anova-interactions-and-nonparametric-tests-black-belt-only/.
 
 ---
 
@@ -925,11 +1039,17 @@ A multi-vari chart decomposing your capstone variation plus a chi-square associa
 12. Compute the chi-square statistic and its p-value, and conclude whether defect type is associated with your categorical factor.
 13. Translate a significant association into a testable process hypothesis — association is not causation, but it does tell you where to look.
 
+**Data files for this lab**
+
+- lab-20-multivari-chisquare.xlsx — dataset. A multi-vari study sampling positional, cyclical and temporal families, plus a plant x defect-mode contingency table for chi-square.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your multi-vari chart captures all three families with quantified variance contributions, your cause list is re-prioritised against the dominant family, and your chi-square satisfies the expected-frequency condition.
 
-> **Note:** The full worksheet for this lab is in labs/lab-20-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-20-multivari-studies-and-chisquare-analysis-black-belt-only/.
 
 ---
 
@@ -962,11 +1082,17 @@ An Analyze tollgate pack with proven root causes, evidence and a business-langua
 10. Prepare your evidence for each challenge — this is exactly what the Day 5 steering committee will probe.
 11. Present the tollgate to a peer group and capture their challenges, then strengthen any weak points before Day 4.
 
+**Data files for this lab**
+
+- lab-21-analyze-tollgate-evidence.xlsx — template. The evidence register for the Analyze tollgate — every claimed root cause, the statistical test that proves it, and the p-value.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every candidate cause carries a verdict, proven causes are triangulated across multiple methods and quantified in dollars, and you have rehearsed a prepared response to each expected challenge.
 
-> **Note:** The full worksheet for this lab is in labs/lab-21-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-21-analyze-tollgate-proving-root-cause-and-telling-the-data-sto/.
 
 ---
 
@@ -1019,11 +1145,17 @@ A scored solution selection matrix mapping each solution to a proven root cause.
 11. Sanity-check the top-ranked solutions: do they collectively address the causes explaining most of the Y gap? If not, revisit generation.
 12. Identify which solutions have controllable factors suitable for DOE optimisation in Labs 23-25.
 
+**Data files for this lab**
+
+- lab-22-solution-selection.xlsx — template. Candidate solutions generated against the proven root causes — screen and score them into an implementation set.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Every solution traces to a proven root cause, criteria weights are agreed with the sponsor, and your selected set collectively addresses the majority of the quantified Y gap.
 
-> **Note:** The full worksheet for this lab is in labs/lab-22-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-22-solution-generation-selection-and-lean-countermeasures-in-de/.
 
 ---
 
@@ -1060,11 +1192,17 @@ A designed 2^k full factorial experiment with main effects and interaction analy
 14. Build the prediction equation from the significant effects and identify the factor settings that optimise your Y.
 15. Run confirmation trials at the predicted optimum. If the confirmation fails, the model is missing something — do not roll out.
 
+**Data files for this lab**
+
+- lab-23-full-factorial-doe.xlsx — dataset. A replicated 2^3 full factorial (16 runs) on clamp pressure, dwell time and ambient temperature — run order already randomised.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your design is fully randomised with replication, you have computed and plotted both main effects and interactions, effect significance is assessed statistically, and confirmation runs validate the predicted optimum.
 
-> **Note:** The full worksheet for this lab is in labs/lab-23-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-23-full-factorial-design-of-experiments-black-belt-only/.
 
 ---
 
@@ -1099,11 +1237,17 @@ A fractional factorial screening design with a documented confounding structure.
 12. Resolve critical ambiguity with a fold-over design — a second fraction that de-aliases the effects you care about.
 13. Take the screened vital few factors forward to a full factorial or RSM study in Lab 25.
 
+**Data files for this lab**
+
+- lab-24-fractional-factorial-doe.xlsx — dataset. A 2^(5-1) resolution V fractional factorial — 16 runs instead of 32, five factors, generator E = ABCD.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You stated the design resolution before running, wrote out the complete alias structure, and any ambiguous conclusion is either declared explicitly or resolved by a fold-over.
 
-> **Note:** The full worksheet for this lab is in labs/lab-24-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-24-fractional-factorial-designs-confounding-and-resolution-blac/.
 
 ---
 
@@ -1140,11 +1284,17 @@ An RSM study locating optimal settings plus a robust design analysis against noi
 14. Compute the signal-to-noise ratio for candidate settings, using the correct form for your objective (smaller-is-better, larger-is-better or nominal-is-best).
 15. Select the robust operating window and run confirmation trials under deliberately varied noise conditions.
 
+**Data files for this lab**
+
+- lab-25-rsm-central-composite.xlsx — dataset. A 13-run central composite design (4 factorial + 4 axial + 5 centre points) around the Lab 23 optimum, to find the true peak and test for curvature.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Curvature is tested with centre points, your second-order model is visualised as a contour or surface plot with a classified stationary point, and the robust settings are confirmed under varied noise conditions.
 
-> **Note:** The full worksheet for this lab is in labs/lab-25-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-25-response-surface-methodology-and-robust-design-black-belt-on/.
 
 ---
 
@@ -1176,11 +1326,17 @@ A completed FMEA with re-scored RPNs and a full pilot plan with success criteria
 13. Complete the cost-benefit analysis: implementation cost, annualised benefit, payback period and NPV where the investment is material.
 14. Run the pilot (or design it fully for post-course execution) and test the results statistically against the baseline — a visual improvement is not proof.
 
+**Data files for this lab**
+
+- lab-26-fmea-worksheet.xlsx — template. A process FMEA worksheet pre-loaded with the seven real failure modes from this project — you score Severity, Occurrence and Detection and compute the RPN.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your FMEA is re-scored post-mitigation with the severity override applied, pilot success criteria were defined before starting, and the improvement is tested statistically against the documented baseline.
 
-> **Note:** The full worksheet for this lab is in labs/lab-26-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-26-fmea-pilot-design-and-implementation-planning-in-depth/.
 
 ---
 
@@ -1227,11 +1383,17 @@ A correctly selected and constructed control chart for your capstone Y with appl
 10. Investigate every signal. If a special cause is found and removed, recalculate the limits excluding that point — but only with a documented assignable cause.
 11. Confirm the process is stable before proceeding. An unstable process has no meaningful capability and cannot be controlled by a control plan alone.
 
+**Data files for this lab**
+
+- lab-27-spc-control-charts.xlsx — dataset. Post-improvement control data: 30 subgroups of 5 for an Xbar-R chart, 40 individual clamp-pressure readings for an I-MR chart, and 24 weeks of defective counts for a p chart.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your chart selection is justified against the selection logic, limits are computed from 25+ subgroups with the correct constants, and all run rules are applied with every signal investigated.
 
-> **Note:** The full worksheet for this lab is in labs/lab-27-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-27-statistical-process-control-and-chart-selection-in-depth/.
 
 ---
 
@@ -1264,11 +1426,17 @@ CUSUM and EWMA charts on your capstone data plus a short-run standardised chart.
 14. Build a short-run chart for a multi-product step in your capstone, or for Meridian's shared assembly line across pump variants.
 15. Decide which chart type belongs in your capstone control plan and justify the choice against shift size, autocorrelation and product mix.
 
+**Data files for this lab**
+
+- lab-28-cusum-ewma-shortrun.xlsx — dataset. 60 individual readings containing a small 0.75-sigma sustained shift at point 31 — plus a short-run sheet with three part numbers and only 15 units each.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You have built CUSUM and EWMA charts and compared their detection speed against Shewhart on the same data, tested for autocorrelation, and justified your final chart selection for the control plan.
 
-> **Note:** The full worksheet for this lab is in labs/lab-28-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-28-cusum-ewma-and-shortrun-spc-black-belt-only/.
 
 ---
 
@@ -1299,11 +1467,17 @@ A Hotelling T-squared chart plus a governed control plan for your capstone.   (T
 12. Define what a control plan audit checks: is the chart still being maintained, are signals being actioned, is the owner still in post, and has the process drifted since handover?
 13. Identify the most common decay mode — charts maintained but signals never actioned — and write your countermeasure for it.
 
+**Data files for this lab**
+
+- lab-29-multivariate-spc-control-plan.xlsx — dataset. 50 paired clamp/dwell readings where the two variables are normally correlated — plus the project's draft control plan to govern.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your correlated characteristics are confirmed by a correlation matrix before applying T-squared, every control plan metric has a specific named reaction plan, and you have defined an audit cadence with explicit criteria.
 
-> **Note:** The full worksheet for this lab is in labs/lab-29-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-29-multivariate-spc-and-control-plan-governance-black-belt-only/.
 
 ---
 
@@ -1335,11 +1509,17 @@ A Finance-validated benefits statement and a signed handover and closure pack.  
 13. Formally close the project with sponsor sign-off, and archive the full DMAIC storyboard.
 14. Update the project portfolio from Lab 2 — record the closed project's realised benefit and select the next project.
 
+**Data files for this lab**
+
+- lab-30-benefit-validation.xlsx — dataset. Before/after cost data, implementation costs and the project's headline metrics — validate the benefit the way Finance will.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your benefit is separated into hard, soft and cost-avoidance components, validated statistically and signed off by Finance, and the process owner has explicitly accepted handover with a scheduled sustainability audit.
 
-> **Note:** The full worksheet for this lab is in labs/lab-30-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-30-financial-benefits-validation-handover-and-project-closure/.
 
 ---
 
@@ -1385,11 +1565,17 @@ A complete A3 storyboard covering your full DMAIC project on a single page.   (T
 11. Apply the visual test: a sponsor should grasp the whole story in 60 seconds from the charts alone, without reading the text.
 12. Have a peer read your A3 cold and tell you what the project did. If they get it wrong, the A3 is not yet finished.
 
+**Data files for this lab**
+
+- lab-31-a3-storyboard.xlsx — template. The A3 storyboard skeleton and an artifact traceability register that maps every lab output onto its panel.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your A3 fits on one page, covers all seven sections, carries your real project data throughout, and a peer reading it cold can correctly summarise the project.
 
-> **Note:** The full worksheet for this lab is in labs/lab-31-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-31-consolidating-your-capstone-the-a3-storyboard/.
 
 ---
 
@@ -1419,11 +1605,17 @@ A 15-minute steering committee presentation with an appendix of supporting analy
 11. Build the APPENDIX with your full analysis — regression output, ANOVA tables, DOE design and alias structure, MSA study and control plan. This is where challenges get answered.
 12. Rehearse to time. Fifteen minutes means fifteen minutes; overrunning signals you cannot prioritise.
 
+**Data files for this lab**
+
+- lab-32-steering-committee-deck.xlsx — template. A slide-by-slide plan for the 15-minute steering committee presentation, plus the anticipated challenge log.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your presentation delivers the decision, benefit and ask within the first two minutes, charts are projector-legible, statistics are stated in business language, and every likely challenge has an appendix slide behind it.
 
-> **Note:** The full worksheet for this lab is in labs/lab-32-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-32-building-the-steering-committee-presentation/.
 
 ---
 
@@ -1453,11 +1645,17 @@ A delivered 15-minute presentation with a defended Q&A session.   (Tools and tec
 11. Where a challenge reveals a genuine weakness, acknowledge it and state the mitigation. Defensiveness costs more credibility than the weakness itself.
 12. Observe the other presentations and record challenges you had not anticipated for your own project.
 
+**Data files for this lab**
+
+- lab-33-capstone-defence-rubric.xlsx — template. The rubric your capstone is assessed against, plus a peer-review form for the labs you observe.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 You delivered within time, answered challenges with evidence from your appendix rather than assertion, and acknowledged genuine weaknesses with a stated mitigation.
 
-> **Note:** The full worksheet for this lab is in labs/lab-33-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-33-capstone-presentation-and-defence/.
 
 ---
 
@@ -1487,11 +1685,17 @@ A lessons-learned record, a Green Belt mentoring plan and a personal development
 11. Identify your next portfolio project from the Lab 2 map, and set a start date.
 12. Write your 90-day plan: complete or hand over the capstone, begin mentoring, and select the next project.
 
+**Data files for this lab**
+
+- lab-34-lessons-learned-mentoring.xlsx — template. A lessons-learned register, a Green Belt mentoring plan and your personal Black Belt development plan.
+
+Each workbook opens on a Data Dictionary sheet defining every column, its unit and the specification limits.
+
 **Check your work**
 
 Your lessons are separated into project-specific and transferable, you have a named Green Belt mentoring plan with a review cadence, and your 90-day plan has dated commitments.
 
-> **Note:** The full worksheet for this lab is in labs/lab-34-*.md.
+> **Note:** The full worksheet and the data files for this lab are in labs/lab-34-lessons-learned-mentoring-green-belts-and-your-black-belt-jo/.
 
 ---
 
