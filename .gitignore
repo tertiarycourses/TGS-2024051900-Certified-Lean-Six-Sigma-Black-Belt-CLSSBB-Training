@@ -62,3 +62,15 @@ __pycache__/
 # Superseded lab folders from the old slug-named layout. Kept on disk as an
 # archive (never deleted), but not republished — the live packs are labs/"NN - Title"/.
 labs/archive/
+
+# ---------------------------------------------------------------------------
+# Private build tooling and superseded versions
+# ---------------------------------------------------------------------------
+# The private courseware build pipeline (skills, agents, hooks). Trainer tooling,
+# not learner courseware. Kept on disk — it is the single source every artifact
+# is generated from — but not part of the public package.
+.claude/
+
+# Superseded deck versions. The public package carries the CURRENT version only;
+# the archive is retained locally so nothing is ever lost.
+courseware/archive/
