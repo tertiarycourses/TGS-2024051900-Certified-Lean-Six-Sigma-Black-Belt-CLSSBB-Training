@@ -50,11 +50,20 @@ TOOLS = {
 from data_domain1 import SCENARIO
 from lab_datasets import DATASETS, dataset_files, has_data
 from build_lab_workbooks import write_workbook
+import build_lab_pack as PACK
 
 
 def lab_dirname(a):
-    """Each lab gets its OWN folder: labs/lab-NN-<slug>/."""
-    return f"lab-{a['num']:02d}-{slug(a['title'])}"
+    """Each lab gets its OWN folder, named in the house convention used by the
+    published activity packs: "NN - Title Case Name" (e.g. "01 - Select and
+    Charter Your Capstone Project"). Readable in Drive, GitHub and Finder alike.
+    """
+    title = a["title"].replace("Elective — ", "")
+    # Strip characters that are awkward in a cross-platform folder name, but
+    # keep the words and their capitalisation.
+    title = title.replace("/", "-").replace(":", " -").replace("?", "")
+    title = re.sub(r"\s+", " ", title).strip()
+    return f"{a['num']:02d} - {title}"
 
 
 def slug(title):
@@ -182,7 +191,13 @@ def readme_md():
     out.append("|---|-----|-------------|------|")
     files = {}
     for a in ACT:
-        fn = f"lab-{a['num']:02d}-{slug(a['title'])}/README.md"
+        # Derived from lab_dirname so the index can never point at a folder
+        # name the builder does not actually create. Spaces are percent-encoded
+        # so the links work on GitHub.
+        # Parentheses must be encoded too, or a Markdown link stops at the
+        # first ")" inside the folder name ("... (Black Belt Only)").
+        fn = (lab_dirname(a).replace(" ", "%20")
+              .replace("(", "%28").replace(")", "%29") + "/README.md")
         files[a["num"]] = fn
         kind = "Elective" if a.get("elective") else "Core"
         title = a["title"].replace("Elective — ", "")
@@ -301,13 +316,41 @@ for stale in glob.glob(os.path.join(LABS, "lab-*.md")):
 readme, files = readme_md()
 written = 0
 workbooks = 0
+packfiles = 0
+
+
+def _tools_used(a):
+    """Ed-tool links this lab's steps actually reference."""
+    used = []
+    for _instr, cmd in a["steps"]:
+        if cmd.startswith("http"):
+            for _k, (name, url) in TOOLS.items():
+                if url == cmd and name not in [u[0] for u in used]:
+                    used.append((name, url))
+    return used
+
+
 for a in ACT:
     folder = os.path.join(LABS, lab_dirname(a))
     os.makedirs(folder, exist_ok=True)
-    with open(os.path.join(folder, "README.md"), "w") as f:
-        f.write(lab_md(a))
+    tp = TOPICS[a["topic"]]
+    specs = DATASETS.get(a["num"], [])
+    tu = _tools_used(a)
+
+    # The full house activity pack, as published on the course Drive.
+    for fname, body in [
+        ("README.md", PACK.readme_md(a, C, tp, specs, SCENARIO, tu)),
+        ("scenario.md", PACK.scenario_md(a, C, tp, specs, SCENARIO)),
+        ("worksheet.md", PACK.worksheet_md(a, C, tp, specs)),
+        ("debrief.md", PACK.debrief_md(a, C, tp, specs)),
+        ("prompt.txt", PACK.prompt_txt(a, C, specs)),
+    ]:
+        with open(os.path.join(folder, fname), "w") as f:
+            f.write(body)
+        packfiles += 1
     written += 1
-    for d in DATASETS.get(a["num"], []):
+
+    for d in specs:
         write_workbook(os.path.join(folder, d["file"]), d, a, C)
         workbooks += 1
 
@@ -512,5 +555,6 @@ def repo_readme(files):
 with open(os.path.join(REPO, "README.md"), "w") as f:
     f.write(repo_readme(files))
 
-print(f"Saved {written} lab folders + {workbooks} workbooks to {LABS}  ({core} core, {written-core} elective)")
+print(f"Saved {written} lab folders: {packfiles} pack files + {workbooks} workbooks "
+      f"-> {LABS}  ({core} core, {written-core} elective)")
 print("Saved labs/README.md, labs/tools.md, README.md and trainer-notes/lab-answer-keys.md")

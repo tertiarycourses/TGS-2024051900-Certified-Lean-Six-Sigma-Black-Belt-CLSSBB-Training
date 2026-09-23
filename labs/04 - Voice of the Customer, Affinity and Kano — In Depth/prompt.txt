@@ -1,0 +1,52 @@
+GenAI prompt — Lab 4: Voice of the Customer, Affinity and Kano — In Depth
+Certified Lean Six Sigma Black Belt (CLSSBB) Training (TGS-2024051900)
+
+Paste into ChatGPT, Microsoft Copilot, Google Gemini or Claude.
+Replace anything in <<double angle brackets>> with your own details.
+Then CHECK the answer against your own working.
+
+------------------------------------------------------------------------
+
+Act as a Lean Six Sigma Black Belt coach.
+
+CONTEXT: Meridian Medical Devices manufactures infusion pump assemblies
+across three plants (Singapore, Penang, Suzhou) on six production lines.
+The project Y is seal weld burst pressure in kPa, with a specification of
+180-260 kPa and a target of 220 kPa.
+
+MY TASK: Capture and classify VOC for your capstone using affinity and Kano analysis (A1, K2).
+
+WHAT I MUST PRODUCE: A VOC log, an affinity diagram and a Kano classification for your capstone customers.
+
+TOOLS AND TECHNIQUES IN SCOPE: Reactive & proactive VOC, verbatim capture, affinity clustering, Kano model, customer segmentation
+
+MY DATA:
+  lab-04-voc-affinity-kano.xlsx — Forty raw customer verbatims from hospital distributors and biomedical engineers — cluster them, translate them into requirements and classify them on the Kano model.
+    sheet 'Verbatims' (40 rows): ID, Source, Verbatim, AffinityCluster, TranslatedRequirement, KanoCategory
+    sheet 'KanoReference' (5 rows): Category, Meaning, If absent, If present
+
+<<Paste the relevant rows, or attach the workbook.>>
+
+MY OWN WORKPLACE CONTEXT (use this instead of Meridian if given):
+  Process: <<your process>>
+  The Y I am improving: <<your metric and its unit>>
+  Current performance: <<your baseline>>
+
+PRODUCE:
+1. The analysis or artifact described above, laid out so I can put it
+   straight into my capstone project pack.
+2. The arithmetic shown in full, so I can check every number myself.
+3. The assumptions you made, listed explicitly.
+4. What this analysis does NOT tell me, and what I would need to
+   collect next to answer that.
+5. One question a sceptical steering committee would ask about this
+   result, and how I should answer it.
+
+Do not invent data. If something you need is missing, ask me for it.
+
+------------------------------------------------------------------------
+
+CHECK THE OUTPUT. Statistical arithmetic from a language model is often
+wrong. Where this lab uses an ed-tool or Excel, that result is the one
+to trust. Note any disagreement in section 4 of your worksheet — finding
+the AI's error is part of the lab.

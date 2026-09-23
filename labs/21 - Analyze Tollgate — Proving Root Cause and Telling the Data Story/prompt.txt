@@ -1,0 +1,52 @@
+GenAI prompt — Lab 21: Analyze Tollgate — Proving Root Cause and Telling the Data Story
+Certified Lean Six Sigma Black Belt (CLSSBB) Training (TGS-2024051900)
+
+Paste into ChatGPT, Microsoft Copilot, Google Gemini or Claude.
+Replace anything in <<double angle brackets>> with your own details.
+Then CHECK the answer against your own working.
+
+------------------------------------------------------------------------
+
+Act as a Lean Six Sigma Black Belt coach.
+
+CONTEXT: Meridian Medical Devices manufactures infusion pump assemblies
+across three plants (Singapore, Penang, Suzhou) on six production lines.
+The project Y is seal weld burst pressure in kPa, with a specification of
+180-260 kPa and a target of 220 kPa.
+
+MY TASK: Consolidate your analysis into a defensible root cause conclusion (A3, K1).
+
+WHAT I MUST PRODUCE: An Analyze tollgate pack with proven root causes, evidence and a business-language summary.
+
+TOOLS AND TECHNIQUES IN SCOPE: Evidence consolidation, root cause validation, statistical-to-business translation, tollgate review, challenge preparation
+
+MY DATA:
+  lab-21-analyze-tollgate-evidence.xlsx — The evidence register for the Analyze tollgate — every claimed root cause, the statistical test that proves it, and the p-value.
+    sheet 'EvidenceRegister' (9 rows): ClaimedRootCause, FromLab, TestUsed, TestStatistic, p-value, PracticalEffectSize, Verdict, EvidenceStrength
+    sheet 'TollgateChecklist' (7 rows): Question, YourAnswer, Artifact that proves it
+
+<<Paste the relevant rows, or attach the workbook.>>
+
+MY OWN WORKPLACE CONTEXT (use this instead of Meridian if given):
+  Process: <<your process>>
+  The Y I am improving: <<your metric and its unit>>
+  Current performance: <<your baseline>>
+
+PRODUCE:
+1. The analysis or artifact described above, laid out so I can put it
+   straight into my capstone project pack.
+2. The arithmetic shown in full, so I can check every number myself.
+3. The assumptions you made, listed explicitly.
+4. What this analysis does NOT tell me, and what I would need to
+   collect next to answer that.
+5. One question a sceptical steering committee would ask about this
+   result, and how I should answer it.
+
+Do not invent data. If something you need is missing, ask me for it.
+
+------------------------------------------------------------------------
+
+CHECK THE OUTPUT. Statistical arithmetic from a language model is often
+wrong. Where this lab uses an ed-tool or Excel, that result is the one
+to trust. Note any disagreement in section 4 of your worksheet — finding
+the AI's error is part of the lab.

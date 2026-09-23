@@ -1,0 +1,51 @@
+GenAI prompt — Lab 25: Response Surface Methodology and Robust Design (Black Belt Only)
+Certified Lean Six Sigma Black Belt (CLSSBB) Training (TGS-2024051900)
+
+Paste into ChatGPT, Microsoft Copilot, Google Gemini or Claude.
+Replace anything in <<double angle brackets>> with your own details.
+Then CHECK the answer against your own working.
+
+------------------------------------------------------------------------
+
+Act as a Lean Six Sigma Black Belt coach.
+
+CONTEXT: Meridian Medical Devices manufactures infusion pump assemblies
+across three plants (Singapore, Penang, Suzhou) on six production lines.
+The project Y is seal weld burst pressure in kPa, with a specification of
+180-260 kPa and a target of 220 kPa.
+
+MY TASK: Optimise factor settings using RSM and make the process robust to noise (A5, K2).
+
+WHAT I MUST PRODUCE: An RSM study locating optimal settings plus a robust design analysis against noise factors.
+
+TOOLS AND TECHNIQUES IN SCOPE: Curvature & centre points, steepest ascent, central composite design, Box-Behnken, contour & surface plots, Taguchi, signal-to-noise, control vs noise factors
+
+MY DATA:
+  lab-25-rsm-central-composite.xlsx — A 13-run central composite design (4 factorial + 4 axial + 5 centre points) around the Lab 23 optimum, to find the true peak and test for curvature.
+    sheet 'CentralComposite' (13 rows): RunOrder, ClampPressure_bar, DwellTime_s, A_coded, B_coded, BurstPressure_kPa
+
+<<Paste the relevant rows, or attach the workbook.>>
+
+MY OWN WORKPLACE CONTEXT (use this instead of Meridian if given):
+  Process: <<your process>>
+  The Y I am improving: <<your metric and its unit>>
+  Current performance: <<your baseline>>
+
+PRODUCE:
+1. The analysis or artifact described above, laid out so I can put it
+   straight into my capstone project pack.
+2. The arithmetic shown in full, so I can check every number myself.
+3. The assumptions you made, listed explicitly.
+4. What this analysis does NOT tell me, and what I would need to
+   collect next to answer that.
+5. One question a sceptical steering committee would ask about this
+   result, and how I should answer it.
+
+Do not invent data. If something you need is missing, ask me for it.
+
+------------------------------------------------------------------------
+
+CHECK THE OUTPUT. Statistical arithmetic from a language model is often
+wrong. Where this lab uses an ed-tool or Excel, that result is the one
+to trust. Note any disagreement in section 4 of your worksheet — finding
+the AI's error is part of the lab.

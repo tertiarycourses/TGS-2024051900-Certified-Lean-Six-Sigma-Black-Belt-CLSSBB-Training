@@ -58,3 +58,7 @@ Thumbs.db
 # Python bytecode from the build pipeline
 __pycache__/
 *.pyc
+
+# Superseded lab folders from the old slug-named layout. Kept on disk as an
+# archive (never deleted), but not republished — the live packs are labs/"NN - Title"/.
+labs/archive/

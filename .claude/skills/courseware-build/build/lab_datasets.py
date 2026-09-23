@@ -12,7 +12,7 @@ Design rules
        Baseline Y      = seal weld burst pressure (kPa), spec 180-260, target 220
        Baseline Ppk    ~ 0.62  (Lab 14)  -> the reason the project exists
        Vital few X     = fixture clamp pressure and weld dwell time (Labs 17-20)
-       Improved Ppk    ~ 1.42  (Labs 25, 27, 30) after the DOE optimum is held
+       Improved Ppk    ~ 1.40  (Labs 25, 27, 30) after the DOE optimum is held
        Annualised hard benefit = SGD 487,000 (Lab 30, ties to Lab 1 COPQ)
 
 2. Every dataset is GENERATED, not hand-typed, from a fixed seed, so the numbers
@@ -41,7 +41,7 @@ import random
 # --------------------------------------------------------------------------
 LSL, TARGET, USL = 180.0, 220.0, 260.0          # burst pressure spec, kPa
 BASELINE_MEAN, BASELINE_SD = 214.0, 21.5        # -> Ppk ~ 0.62
-IMPROVED_MEAN, IMPROVED_SD = 221.0, 9.3         # -> Ppk ~ 1.42
+IMPROVED_MEAN, IMPROVED_SD = 221.0, 9.3         # -> Ppk ~ 1.40
 PLANTS = ["Singapore", "Penang", "Suzhou"]
 LINES = ["L1", "L2", "L3", "L4", "L5", "L6"]
 SHIFTS = ["A", "B", "C"]
@@ -358,7 +358,7 @@ def _lab14():
                   "Ppk = min(260-214, 214-180)/(3x21.5) = 0.53. Cpk (within) is slightly higher than "
                   "Ppk, which tells you the process is not stable over time. Roughly 5.6% of units "
                   "fall outside spec — about 2.9 sigma. THIS IS THE BASELINE the whole project "
-                  "improves; Lab 27 re-measures it at Ppk ~1.42. "
+                  "improves; Lab 27 re-measures it at Ppk ~1.40. "
                   "CycleTime is lognormal (Anderson-Darling p<0.005): do NOT compute Ppk on the raw "
                   "data — transform (Box-Cox, lambda~0) or fit a lognormal distribution first.",
         "sheets": [
@@ -912,7 +912,7 @@ def _lab27():
         "answer": "XbarR: chart the subgroup means. Centre line ~221 kPa, UCL ~233.5, LCL ~208.5. "
                   "Subgroups 24 and 25 sit ABOVE the UCL — a genuine special cause (a fixture reset "
                   "during that shift). Investigate and exclude before computing capability. With "
-                  "those points removed the process is stable: Ppk ~ 1.42, up from the 0.62 baseline "
+                  "those points removed the process is stable: Ppk ~ 1.40, up from the 0.62 baseline "
                   "in Lab 14. "
                   "I-MR: clamp pressure is in control at ~47.4 bar (the Lab 25 optimum), so the "
                   "control plan is holding the X. Use I-MR, not Xbar-R — these are individual "
@@ -1059,7 +1059,7 @@ def _lab30():
         ("Black Belt project time (5 months)", 46_000, "One-off"),
     ]
     metrics = [
-        ("Baseline Ppk (Lab 14)", 0.62), ("Improved Ppk (Lab 27)", 1.42),
+        ("Baseline Ppk (Lab 14)", 0.62), ("Improved Ppk (Lab 27)", 1.40),
         ("Baseline defect rate %", 2.90), ("Improved defect rate %", 1.21),
         ("Baseline sigma level", 2.90), ("Improved sigma level", 4.26),
         ("Baseline annual COPQ (SGD)", BASELINE_COPQ),
@@ -1567,7 +1567,7 @@ def _templates():
         "The A3 discipline is subtraction, not addition. Thirty labs produced far more than one page "
         "holds, so the register exists to decide what goes on the A3 and what goes in the appendix "
         "pack you bring to the room but do not present. Panel 2 must carry the baseline Ppk of 0.62 "
-        "and panel 7 the improved 1.42, measured the SAME way — the single most common capstone "
+        "and panel 7 the improved 1.40, measured the SAME way — the single most common capstone "
         "failure is a before/after comparison using two different measurement definitions, which the "
         "steering committee will spot immediately.")
 

@@ -1,0 +1,53 @@
+GenAI prompt — Lab 17: Hypothesis Testing — In Depth, With Test Selection
+Certified Lean Six Sigma Black Belt (CLSSBB) Training (TGS-2024051900)
+
+Paste into ChatGPT, Microsoft Copilot, Google Gemini or Claude.
+Replace anything in <<double angle brackets>> with your own details.
+Then CHECK the answer against your own working.
+
+------------------------------------------------------------------------
+
+Act as a Lean Six Sigma Black Belt coach.
+
+CONTEXT: Meridian Medical Devices manufactures infusion pump assemblies
+across three plants (Singapore, Penang, Suzhou) on six production lines.
+The project Y is seal weld burst pressure in kPa, with a specification of
+180-260 kPa and a target of 220 kPa.
+
+MY TASK: Test your capstone's candidate causes with correctly selected hypothesis tests (A3, K2).
+
+WHAT I MUST PRODUCE: Completed hypothesis tests on your capstone's candidate causes with documented conclusions.
+
+TOOLS AND TECHNIQUES IN SCOPE: H0/Ha, alpha, beta, power, p-values, t-tests, paired t, F-test, proportion tests, test selection logic
+
+MY DATA:
+  lab-17-hypothesis-testing.xlsx — Three tests on one sheet each: a 2-sample t (old vs new fixture), a paired t (before/after operator re-training) and a 2-proportion test (defect rates by plant).
+    sheet 'TwoSample' (80 rows): FixtureDesign, BurstPressure
+    sheet 'Paired' (30 rows): Operator, Before_kPa, After_kPa
+    sheet 'TwoProportion' (3 rows): Plant, UnitsInspected, Defectives
+
+<<Paste the relevant rows, or attach the workbook.>>
+
+MY OWN WORKPLACE CONTEXT (use this instead of Meridian if given):
+  Process: <<your process>>
+  The Y I am improving: <<your metric and its unit>>
+  Current performance: <<your baseline>>
+
+PRODUCE:
+1. The analysis or artifact described above, laid out so I can put it
+   straight into my capstone project pack.
+2. The arithmetic shown in full, so I can check every number myself.
+3. The assumptions you made, listed explicitly.
+4. What this analysis does NOT tell me, and what I would need to
+   collect next to answer that.
+5. One question a sceptical steering committee would ask about this
+   result, and how I should answer it.
+
+Do not invent data. If something you need is missing, ask me for it.
+
+------------------------------------------------------------------------
+
+CHECK THE OUTPUT. Statistical arithmetic from a language model is often
+wrong. Where this lab uses an ed-tool or Excel, that result is the one
+to trust. Note any disagreement in section 4 of your worksheet — finding
+the AI's error is part of the lab.
