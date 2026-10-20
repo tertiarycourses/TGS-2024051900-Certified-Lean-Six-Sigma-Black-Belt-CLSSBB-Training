@@ -74,3 +74,10 @@ labs/archive/
 # Superseded deck versions. The public package carries the CURRENT version only;
 # the archive is retained locally so nothing is ever lost.
 courseware/archive/
+
+# Facilitator Guide + Assessment Plan embed the answer keys and rubric:
+# trainer-only (Google Drive + TMS), never GitHub
+**/FG_*
+**/FG-*
+**/Assessment_Plan_*
+**/AP-*
